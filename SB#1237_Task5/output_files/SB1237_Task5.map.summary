@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Mar 05 15:04:12 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : SB1237_Task5
+Top-level Entity Name : SB_1237_Task5
+Family : Cyclone IV E
+Total logic elements : 6,241
+    Total combinational functions : 5,005
+    Dedicated logic registers : 2,242
+Total registers : 2242
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 1,040
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,10 @@
+module pwm(input clk, output pwm, input [7:0]d);
+
+reg [31:0] duty;
+initial 
+duty = d*1000;
+always @(posedge clk)
+begin
+
+end
+endmodule 

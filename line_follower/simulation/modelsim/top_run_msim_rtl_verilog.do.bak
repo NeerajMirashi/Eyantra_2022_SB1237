@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+E:/github/line_follower {E:/github/line_follower/adc_control.v}
+vlog -vlog01compat -work work +incdir+E:/github/line_follower {E:/github/line_follower/top.v}
+vlog -vlog01compat -work work +incdir+E:/github/line_follower {E:/github/line_follower/path_planner.v}
+

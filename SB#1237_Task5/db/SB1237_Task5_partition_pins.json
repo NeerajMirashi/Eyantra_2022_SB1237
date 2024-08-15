@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "adc_cs_n",
+					"strict" : false
+				},
+				{
+					"name" : "din",
+					"strict" : false
+				},
+				{
+					"name" : "adc_sck",
+					"strict" : false
+				},
+				{
+					"name" : "dc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dc[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dc[3]",
+					"strict" : false
+				},
+				{
+					"name" : "l_w",
+					"strict" : false
+				},
+				{
+					"name" : "r_w",
+					"strict" : false
+				},
+				{
+					"name" : "c_w",
+					"strict" : false
+				},
+				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb_w[8]",
+					"strict" : false
+				},
+				{
+					"name" : "s2",
+					"strict" : false
+				},
+				{
+					"name" : "s3",
+					"strict" : false
+				},
+				{
+					"name" : "turn_w[0]",
+					"strict" : false
+				},
+				{
+					"name" : "turn_w[1]",
+					"strict" : false
+				},
+				{
+					"name" : "servo1",
+					"strict" : false
+				},
+				{
+					"name" : "servo2",
+					"strict" : false
+				},
+				{
+					"name" : "servo3",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "dout",
+					"strict" : false
+				},
+				{
+					"name" : "freq_color",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

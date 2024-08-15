@@ -1,0 +1,5 @@
+Warning (10268): Verilog HDL information at SB_1237_Task5.v(214): always construct contains both blocking and non-blocking assignments File: D:/github/SB#1237_Task5/SB_1237_Task5.v Line: 214
+Warning (10268): Verilog HDL information at SB_1237_uart.v(44): always construct contains both blocking and non-blocking assignments File: D:/github/SB#1237_Task5/SB_1237_uart.v Line: 44
+Warning (10268): Verilog HDL information at SB_1237_top_color.v(24): always construct contains both blocking and non-blocking assignments File: D:/github/SB#1237_Task5/SB_1237_top_color.v Line: 24
+Warning (10268): Verilog HDL information at SB_1237_path_planner.v(102): always construct contains both blocking and non-blocking assignments File: D:/github/SB#1237_Task5/SB_1237_path_planner.v Line: 102
+Warning (10268): Verilog HDL information at SB_1237_servo.v(11): always construct contains both blocking and non-blocking assignments File: D:/github/SB#1237_Task5/SB_1237_servo.v Line: 11

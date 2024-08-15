@@ -1,0 +1,7 @@
+
+State Machine - |SB_1237_Task5|current_position
+Name current_position.11 current_position.10 current_position.01 current_position.00 
+current_position.00 0 0 0 0 
+current_position.01 0 0 1 1 
+current_position.10 0 1 0 1 
+current_position.11 1 0 0 1 

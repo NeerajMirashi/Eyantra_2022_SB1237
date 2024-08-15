@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -17.706
+TNS   : -16588.365
+
+Type  : Slow 1200mV 85C Model Setup 'SB_1237_uart:comb_5|temp_clk'
+Slack : -5.234
+TNS   : -232.960
+
+Type  : Slow 1200mV 85C Model Setup 'SB_1237_adc_control:comb_3|y'
+Slack : -2.525
+TNS   : -58.602
+
+Type  : Slow 1200mV 85C Model Setup 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : -1.393
+TNS   : -15.261
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.326
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SB_1237_adc_control:comb_3|y'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SB_1237_uart:comb_5|temp_clk'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -1992.870
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SB_1237_uart:comb_5|temp_clk'
+Slack : -1.000
+TNS   : -69.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SB_1237_adc_control:comb_3|y'
+Slack : -1.000
+TNS   : -42.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -15.726
+TNS   : -14701.605
+
+Type  : Slow 1200mV 0C Model Setup 'SB_1237_uart:comb_5|temp_clk'
+Slack : -4.575
+TNS   : -200.723
+
+Type  : Slow 1200mV 0C Model Setup 'SB_1237_adc_control:comb_3|y'
+Slack : -2.148
+TNS   : -49.178
+
+Type  : Slow 1200mV 0C Model Setup 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : -1.147
+TNS   : -12.035
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SB_1237_adc_control:comb_3|y'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SB_1237_uart:comb_5|temp_clk'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -1992.870
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SB_1237_uart:comb_5|temp_clk'
+Slack : -1.000
+TNS   : -69.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SB_1237_adc_control:comb_3|y'
+Slack : -1.000
+TNS   : -42.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -9.340
+TNS   : -8823.450
+
+Type  : Fast 1200mV 0C Model Setup 'SB_1237_uart:comb_5|temp_clk'
+Slack : -2.527
+TNS   : -101.611
+
+Type  : Fast 1200mV 0C Model Setup 'SB_1237_adc_control:comb_3|y'
+Slack : -0.956
+TNS   : -16.772
+
+Type  : Fast 1200mV 0C Model Setup 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : -0.331
+TNS   : -2.241
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SB_1237_adc_control:comb_3|y'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SB_1237_uart:comb_5|temp_clk'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -2164.586
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SB_1237_uart:comb_5|temp_clk'
+Slack : -1.000
+TNS   : -69.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SB_1237_adc_control:comb_3|y'
+Slack : -1.000
+TNS   : -42.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SB_1237_top_color:comb_4|SB_1237_freq_counter:comb_3|f'
+Slack : -1.000
+TNS   : -16.000
+
+------------------------------------------------------------

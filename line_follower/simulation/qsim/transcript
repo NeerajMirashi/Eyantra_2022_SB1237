@@ -1,0 +1,61 @@
+# do top.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:16:49 on Jan 13,2023
+# vlog -work work top.vo 
+# -- Compiling module path_planner
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	path_planner
+# End time: 00:16:50 on Jan 13,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:16:50 on Jan 13,2023
+# vlog -work work Waveform1.vwf.vt 
+# -- Compiling module path_planner_vlg_vec_tst
+# 
+# Top level modules:
+# 	path_planner_vlg_vec_tst
+# End time: 00:16:50 on Jan 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.path_planner_vlg_vec_tst 
+# Start time: 00:16:50 on Jan 13,2023
+# Loading work.path_planner_vlg_vec_tst
+# Loading work.path_planner
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 14157 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#26
+# Simulation time: 470000 ps
+# Simulation time: 470000 ps
+# Simulation time: 470000 ps
+# Simulation time: 470000 ps
+# Simulation time: 470000 ps
+# Simulation time: 470000 ps
+# Simulation time: 470000 ps
+# Simulation time: 470000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 37660000 ps
+# Simulation time: 92875001 ps
+# ** Note: $finish    : Waveform1.vwf.vt(53)
+#    Time: 100 us  Iteration: 0  Instance: /path_planner_vlg_vec_tst
+# End time: 00:17:34 on Jan 13,2023, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 1

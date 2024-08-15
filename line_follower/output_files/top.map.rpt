@@ -1,0 +1,1131 @@
+Analysis & Synthesis report for top
+Mon Jan 23 20:21:43 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for path_planner:comb_7|altsyncram:parent_rtl_0|altsyncram_ksg1:auto_generated
+ 16. Parameter Settings for User Entity Instance: uart:comb_6
+ 17. Parameter Settings for User Entity Instance: path_planner:comb_7
+ 18. Parameter Settings for Inferred Entity Instance: path_planner:comb_7|altsyncram:parent_rtl_0
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "uart:comb_6"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jan 23 20:21:43 2023       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 5,689                                       ;
+;     Total combinational functions  ; 4,500                                       ;
+;     Dedicated logic registers      ; 1,986                                       ;
+; Total registers                    ; 1986                                        ;
+; Total pins                         ; 27                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 832                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; freq_counter.v                   ; yes             ; User Verilog HDL File        ; E:/github/line_follower/freq_counter.v                                       ;         ;
+; adc_control.v                    ; yes             ; User Verilog HDL File        ; E:/github/line_follower/adc_control.v                                        ;         ;
+; top.v                            ; yes             ; User Verilog HDL File        ; E:/github/line_follower/top.v                                                ;         ;
+; path_planner.v                   ; yes             ; User Verilog HDL File        ; E:/github/line_follower/path_planner.v                                       ;         ;
+; uart.v                           ; yes             ; User Verilog HDL File        ; E:/github/line_follower/uart.v                                               ;         ;
+; top_color.v                      ; yes             ; User Verilog HDL File        ; E:/github/line_follower/top_color.v                                          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_ksg1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/github/line_follower/db/altsyncram_ksg1.tdf                               ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 5,689     ;
+;                                             ;           ;
+; Total combinational functions               ; 4500      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 3161      ;
+;     -- 3 input functions                    ; 762       ;
+;     -- <=2 input functions                  ; 577       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 3778      ;
+;     -- arithmetic mode                      ; 722       ;
+;                                             ;           ;
+; Total registers                             ; 1986      ;
+;     -- Dedicated logic registers            ; 1986      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 27        ;
+; Total memory bits                           ; 832       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1893      ;
+; Total fan-out                               ; 22289     ;
+; Average fan-out                             ; 3.39      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------+--------------+
+; |top                                      ; 4500 (257)          ; 1986 (163)                ; 832         ; 0            ; 0       ; 0         ; 27   ; 0            ; |top                                                                            ; top             ; work         ;
+;    |adc_control:comb_4|                   ; 114 (114)           ; 74 (74)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|adc_control:comb_4                                                         ; adc_control     ; work         ;
+;    |path_planner:comb_7|                  ; 3782 (3782)         ; 1527 (1527)               ; 832         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|path_planner:comb_7                                                        ; path_planner    ; work         ;
+;       |altsyncram:parent_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 832         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|path_planner:comb_7|altsyncram:parent_rtl_0                                ; altsyncram      ; work         ;
+;          |altsyncram_ksg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 832         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|path_planner:comb_7|altsyncram:parent_rtl_0|altsyncram_ksg1:auto_generated ; altsyncram_ksg1 ; work         ;
+;    |top_color:comb_5|                     ; 159 (98)            ; 120 (71)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|top_color:comb_5                                                           ; top_color       ; work         ;
+;       |freq_counter:comb_3|               ; 61 (61)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|top_color:comb_5|freq_counter:comb_3                                       ; freq_counter    ; work         ;
+;    |uart:comb_6|                          ; 188 (188)           ; 102 (102)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart:comb_6                                                                ; uart            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                          ;
++---------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; path_planner:comb_7|altsyncram:parent_rtl_0|altsyncram_ksg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 26           ; 32           ; 26           ; 32           ; 832  ; None ;
++---------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                      ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+
+; Register name                                                                              ; Reason for Removal                         ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+
+; path_planner:comb_7|dir[0][0]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][1]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][2]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][3]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][4]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][5]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][6]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][7]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][8]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][9]                                                              ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][11]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][12]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][13]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][14]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][15]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][16]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][17]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][18]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][19]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][20]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][21]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][22]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][23]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][24]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][25]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][26]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][27]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][28]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][29]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][30]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[0][31]                                                             ; Stuck at GND due to stuck port data_in     ;
+; top_color:comb_5|next_state[3..31]                                                         ; Stuck at GND due to stuck port data_in     ;
+; i[0]                                                                                       ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|sn[5..31]                                                              ; Stuck at GND due to stuck port data_in     ;
+; tstr[2..4,6,7,9,12,14,15,21,23,25,28,30,31,34,35,38,39,41,42,44,47,48,50..53,55,59..61,63] ; Merged with tstr[45]                       ;
+; tstr[0,1,5,8,10,11,13,18,22,24,26,27,29,36,37,40,46,49,54,56..58,62]                       ; Merged with tstr[43]                       ;
+; tstr[17]                                                                                   ; Merged with tstr[20]                       ;
+; turn[4..9,11..31]                                                                          ; Merged with turn[10]                       ;
+; line_follow_state[2..9,11..31]                                                             ; Merged with line_follow_state[10]          ;
+; st[3..9,11..31]                                                                            ; Merged with st[10]                         ;
+; uart:comb_6|state[2..9,11..31]                                                             ; Merged with uart:comb_6|state[10]          ;
+; top_color:comb_5|state[3..9,11..31]                                                        ; Merged with top_color:comb_5|state[10]     ;
+; state[3..9,11..31]                                                                         ; Merged with state[10]                      ;
+; path_planner:comb_7|dir[1][11]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][12]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][13]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][14]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][15]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][16]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][17]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][18]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][19]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][20]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][21]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][22]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][23]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][24]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][25]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][26]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][27]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][28]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][29]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][2]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][30]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][31]                                                             ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][3]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][4]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][5]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][6]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][7]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][8]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[1][9]                                                              ; Merged with path_planner:comb_7|dir[1][10] ;
+; path_planner:comb_7|dir[2][11]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][12]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][13]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][14]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][15]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][16]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][17]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][18]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][19]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][20]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][21]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][22]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][23]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][24]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][25]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][26]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][27]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][28]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][29]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][2]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][30]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][31]                                                             ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][3]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][4]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][5]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][6]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][7]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][8]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[2][9]                                                              ; Merged with path_planner:comb_7|dir[2][10] ;
+; path_planner:comb_7|dir[3][11]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][12]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][13]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][14]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][15]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][16]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][17]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][18]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][19]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][20]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][21]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][22]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][23]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][24]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][25]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][26]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][27]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][28]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][29]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][2]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][30]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][31]                                                             ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][3]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][4]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][5]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][6]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][7]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][8]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[3][9]                                                              ; Merged with path_planner:comb_7|dir[3][10] ;
+; path_planner:comb_7|dir[4][11]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][12]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][13]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][14]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][15]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][16]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][17]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][18]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][19]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][20]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][21]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][22]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][23]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][24]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][25]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][26]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][27]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][28]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][29]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][2]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][30]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][31]                                                             ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][3]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][4]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][5]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][6]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][7]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][8]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[4][9]                                                              ; Merged with path_planner:comb_7|dir[4][10] ;
+; path_planner:comb_7|dir[5][11]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][12]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][13]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][14]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][15]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][16]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][17]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][18]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][19]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][20]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][21]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][22]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][23]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][24]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][25]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][26]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][27]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][28]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][29]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][2]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][30]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][31]                                                             ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][3]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][4]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][5]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][6]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][7]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][8]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[5][9]                                                              ; Merged with path_planner:comb_7|dir[5][10] ;
+; path_planner:comb_7|dir[6][11]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][12]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][13]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][14]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][15]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][16]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][17]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][18]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][19]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][20]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][21]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][22]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][23]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][24]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][25]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][26]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][27]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][28]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][29]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][2]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][30]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][31]                                                             ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][3]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][4]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][5]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][6]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][7]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][8]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[6][9]                                                              ; Merged with path_planner:comb_7|dir[6][10] ;
+; path_planner:comb_7|dir[7][11]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][12]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][13]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][14]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][15]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][16]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][17]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][18]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][19]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][20]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][21]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][22]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][23]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][24]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][25]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][26]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][27]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][28]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][29]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][2]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][30]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][31]                                                             ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][3]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][4]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][5]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][6]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][7]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][8]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[7][9]                                                              ; Merged with path_planner:comb_7|dir[7][10] ;
+; path_planner:comb_7|dir[8][11]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][12]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][13]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][14]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][15]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][16]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][17]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][18]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][19]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][20]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][21]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][22]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][23]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][24]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][25]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][26]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][27]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][28]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][29]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][2]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][30]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][31]                                                             ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][3]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][4]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][5]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][6]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][7]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][8]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[8][9]                                                              ; Merged with path_planner:comb_7|dir[8][10] ;
+; path_planner:comb_7|dir[9][11]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][12]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][13]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][14]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][15]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][16]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][17]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][18]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][19]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][20]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][21]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][22]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][23]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][24]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][25]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][26]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][27]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][28]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][29]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][2]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][30]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][31]                                                             ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][3]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][4]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][5]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][6]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][7]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][8]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|dir[9][9]                                                              ; Merged with path_planner:comb_7|dir[9][10] ;
+; path_planner:comb_7|ostate[3..9,11..31]                                                    ; Merged with path_planner:comb_7|ostate[10] ;
+; path_planner:comb_7|state[3..9,11..31]                                                     ; Merged with path_planner:comb_7|state[10]  ;
+; path_planner:comb_7|mm[1..9,11..31]                                                        ; Merged with path_planner:comb_7|mm[10]     ;
+; tstr[45]                                                                                   ; Stuck at GND due to stuck port data_in     ;
+; nn[1..31]                                                                                  ; Lost fanout                                ;
+; adc_control:comb_4|t5[0,1]                                                                 ; Lost fanout                                ;
+; adc_control:comb_4|t6[0..2]                                                                ; Lost fanout                                ;
+; adc_control:comb_4|t7[0]                                                                   ; Lost fanout                                ;
+; tstr[43]                                                                                   ; Stuck at VCC due to stuck port data_in     ;
+; adc_control:comb_4|t7[1]                                                                   ; Lost fanout                                ;
+; e_node[4]                                                                                  ; Stuck at GND due to stuck port data_in     ;
+; s_node[4]                                                                                  ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|sn[4]                                                                  ; Stuck at GND due to stuck port data_in     ;
+; state[10]                                                                                  ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|ostate[10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; turn[10]                                                                                   ; Stuck at GND due to stuck port data_in     ;
+; uart:comb_6|state[10]                                                                      ; Stuck at GND due to stuck port data_in     ;
+; top_color:comb_5|state[10]                                                                 ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|mm[10]                                                                 ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[1][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[2][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[3][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[4][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[5][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[6][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[7][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[8][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|dir[9][10]                                                             ; Stuck at GND due to stuck port data_in     ;
+; line_follow_state[10]                                                                      ; Stuck at GND due to stuck port data_in     ;
+; st[10]                                                                                     ; Stuck at GND due to stuck port data_in     ;
+; path_planner:comb_7|state[10]                                                              ; Stuck at GND due to stuck port data_in     ;
+; e_node[3]                                                                                  ; Merged with e_node[0]                      ;
+; nn[0]                                                                                      ; Merged with e_node[1]                      ;
+; tstr[19]                                                                                   ; Merged with tstr[33]                       ;
+; tstr[20]                                                                                   ; Merged with tstr[32]                       ;
+; e_node[1]                                                                                  ; Merged with s_node[1]                      ;
+; i[5..31]                                                                                   ; Lost fanout                                ;
+; Total Number of Removed Registers = 755                                                    ;                                            ;
++--------------------------------------------------------------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                          ;
++---------------------------------+---------------------------+----------------------------------------+
+; Register name                   ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------------------+---------------------------+----------------------------------------+
+; nn[1]                           ; Lost Fanouts              ; nn[2], nn[3], nn[4], nn[5]             ;
+; e_node[4]                       ; Stuck at GND              ; s_node[4], path_planner:comb_7|sn[4]   ;
+;                                 ; due to stuck port data_in ;                                        ;
+; top_color:comb_5|next_state[10] ; Stuck at GND              ; top_color:comb_5|state[10]             ;
+;                                 ; due to stuck port data_in ;                                        ;
++---------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1986  ;
+; Number of registers using Synchronous Clear  ; 80    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1729  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; adc_control:comb_4|cs                   ; 2       ;
+; uart:comb_6|x                           ; 1       ;
+; adc_control:comb_4|addr[0]              ; 7       ;
+; adc_control:comb_4|addr[2]              ; 5       ;
+; adc_control:comb_4|addr[1]              ; 6       ;
+; st[0]                                   ; 16      ;
+; uart:comb_6|temp_clk                    ; 69      ;
+; top_color:comb_5|state[0]               ; 16      ;
+; state[0]                                ; 4       ;
+; uart:comb_6|i[3]                        ; 4       ;
+; top_color:comb_5|next_state[1]          ; 2       ;
+; e_node[0]                               ; 5       ;
+; path_planner:comb_7|ostate[0]           ; 29      ;
+; path_planner:comb_7|state[0]            ; 89      ;
+; path_planner:comb_7|mm[0]               ; 6       ;
+; path_planner:comb_7|mn[6]               ; 1       ;
+; path_planner:comb_7|mn[5]               ; 1       ;
+; path_planner:comb_7|mn[2]               ; 1       ;
+; Total number of inverted registers = 18 ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                     ;
++---------------------------------------------+----------------------------------+
+; Register Name                               ; RAM Name                         ;
++---------------------------------------------+----------------------------------+
+; path_planner:comb_7|parent_rtl_0_bypass[0]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[1]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[2]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[3]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[4]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[5]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[6]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[7]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[8]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[9]  ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[10] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[11] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[12] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[13] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[14] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[15] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[16] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[17] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[18] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[19] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[20] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[21] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[22] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[23] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[24] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[25] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[26] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[27] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[28] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[29] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[30] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[31] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[32] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[33] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[34] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[35] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[36] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[37] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[38] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[39] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[40] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[41] ; path_planner:comb_7|parent_rtl_0 ;
+; path_planner:comb_7|parent_rtl_0_bypass[42] ; path_planner:comb_7|parent_rtl_0 ;
++---------------------------------------------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|top_color:comb_5|color_temp[1]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|line_follow_state[10]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|tstr[16]                           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|top_color:comb_5|color[1]          ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |top|path_planner:comb_7|final_path[6]  ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |top|path_planner:comb_7|final_path[14] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |top|dc_r[0]                            ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 31 LEs               ; 62 LEs                 ; Yes        ; |top|uart:comb_6|i[2]                   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top|path_planner:comb_7|m[28]          ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[0][14]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[0][3]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[1][20]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[1][0]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[2][15]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[2][1]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[3][11]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[3][3]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[4][20]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[4][4]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[5][27]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[5][3]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[6][17]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[6][0]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[7][31]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[7][0]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[8][5]        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[8][3]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[9][19]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[9][4]        ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[10][25]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[10][0]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[11][22]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[11][4]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[12][8]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[12][1]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[13][16]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[13][0]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[14][7]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[14][4]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[15][31]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[15][1]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[16][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[16][3]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[17][27]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[17][3]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[18][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[18][3]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[19][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[19][4]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[20][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[20][4]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[21][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[21][3]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[22][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[22][3]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[23][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[23][3]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[24][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[24][3]       ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|path_planner:comb_7|d[25][11]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|path_planner:comb_7|d[25][0]       ;
+; 5:1                ; 29 bits   ; 87 LEs        ; 29 LEs               ; 58 LEs                 ; Yes        ; |top|path_planner:comb_7|mn[0]          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|dc_r[1]                            ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |top|path_planner:comb_7|ostate[1]      ;
+; 6:1                ; 27 bits   ; 108 LEs       ; 54 LEs               ; 54 LEs                 ; Yes        ; |top|path_planner:comb_7|en[17]         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |top|state[1]                           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|path_planner:comb_7|final_path[4]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|path_planner:comb_7|final_path[12] ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|turn[1]                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|path_planner:comb_7|final_path[9]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|path_planner:comb_7|final_path[10] ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 12 LEs               ; 20 LEs                 ; Yes        ; |top|path_planner:comb_7|state[2]       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|path_planner:comb_7|mn[6]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|Mux2                               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |top|line_follow_state                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|path_planner:comb_7|Mux359         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|path_planner:comb_7|Mux359         ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|Mux1                               ;
+; 26:1               ; 32 bits   ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |top|path_planner:comb_7|Mux18          ;
+; 26:1               ; 32 bits   ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |top|path_planner:comb_7|Mux42          ;
+; 26:1               ; 32 bits   ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |top|path_planner:comb_7|Mux111         ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |top|path_planner:comb_7|Selector1303   ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; No         ; |top|path_planner:comb_7|dir            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for path_planner:comb_7|altsyncram:parent_rtl_0|altsyncram_ksg1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------+
+; Assignment                      ; Value              ; From ; To                                  ;
++---------------------------------+--------------------+------+-------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
++---------------------------------+--------------------+------+-------------------------------------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:comb_6 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 8     ; Signed Integer                  ;
+; idle           ; 0     ; Signed Integer                  ;
+; start          ; 1     ; Signed Integer                  ;
+; data           ; 2     ; Signed Integer                  ;
+; stop           ; 3     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: path_planner:comb_7 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; node_count     ; 27    ; Signed Integer                          ;
+; max_edges      ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: path_planner:comb_7|altsyncram:parent_rtl_0 ;
++------------------------------------+----------------------+----------------------------------+
+; Parameter Name                     ; Value                ; Type                             ;
++------------------------------------+----------------------+----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                          ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                   ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                          ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                          ;
+; WIDTH_A                            ; 32                   ; Untyped                          ;
+; WIDTHAD_A                          ; 5                    ; Untyped                          ;
+; NUMWORDS_A                         ; 26                   ; Untyped                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                          ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                          ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WIDTH_B                            ; 32                   ; Untyped                          ;
+; WIDTHAD_B                          ; 5                    ; Untyped                          ;
+; NUMWORDS_B                         ; 26                   ; Untyped                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                          ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                          ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                          ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                          ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                          ;
+; BYTE_SIZE                          ; 8                    ; Untyped                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; INIT_FILE                          ; UNUSED               ; Untyped                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                          ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                          ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                          ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_ksg1      ; Untyped                          ;
++------------------------------------+----------------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                        ;
++-------------------------------------------+---------------------------------------------+
+; Name                                      ; Value                                       ;
++-------------------------------------------+---------------------------------------------+
+; Number of entity instances                ; 1                                           ;
+; Entity Instance                           ; path_planner:comb_7|altsyncram:parent_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                   ;
+;     -- WIDTH_A                            ; 32                                          ;
+;     -- NUMWORDS_A                         ; 26                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                ;
+;     -- WIDTH_B                            ; 32                                          ;
+;     -- NUMWORDS_B                         ; 26                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                    ;
++-------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:comb_6"                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 27                          ;
+; cycloneiii_ff         ; 1986                        ;
+;     ENA               ; 1657                        ;
+;     ENA SCLR          ; 72                          ;
+;     SCLR              ; 8                           ;
+;     plain             ; 249                         ;
+; cycloneiii_lcell_comb ; 4505                        ;
+;     arith             ; 722                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 439                         ;
+;         3 data inputs ; 280                         ;
+;     normal            ; 3783                        ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 36                          ;
+;         2 data inputs ; 100                         ;
+;         3 data inputs ; 482                         ;
+;         4 data inputs ; 3161                        ;
+; cycloneiii_ram_block  ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 18.50                       ;
+; Average LUT depth     ; 9.05                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:10     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Mon Jan 23 20:21:24 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file freq_counter.v
+    Info (12023): Found entity 1: freq_counter File: E:/github/line_follower/freq_counter.v Line: 1
+Warning (10229): Verilog HDL Expression warning at adc_control.v(47): truncated literal to match 3 bits File: E:/github/line_follower/adc_control.v Line: 47
+Info (12021): Found 1 design units, including 1 entities, in source file adc_control.v
+    Info (12023): Found entity 1: adc_control File: E:/github/line_follower/adc_control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: top File: E:/github/line_follower/top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file path_planner.v
+    Info (12023): Found entity 1: path_planner File: E:/github/line_follower/path_planner.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb.v
+    Info (12023): Found entity 1: tb File: E:/github/line_follower/tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file test.v
+    Info (12023): Found entity 1: test File: E:/github/line_follower/test.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file uart.v
+    Info (12023): Found entity 1: uart File: E:/github/line_follower/uart.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file top_color.v
+    Info (12023): Found entity 1: top_color File: E:/github/line_follower/top_color.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at adc_control.v(31): created implicit net for "data_frame" File: E:/github/line_follower/adc_control.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at adc_control.v(32): created implicit net for "d_out_ch5" File: E:/github/line_follower/adc_control.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at adc_control.v(33): created implicit net for "d_out_ch6" File: E:/github/line_follower/adc_control.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at adc_control.v(34): created implicit net for "d_out_ch7" File: E:/github/line_follower/adc_control.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(32): instance has no name File: E:/github/line_follower/top.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at top_color.v(6): instance has no name File: E:/github/line_follower/top_color.v Line: 6
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(42): instance has no name File: E:/github/line_follower/top.v Line: 42
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(60): instance has no name File: E:/github/line_follower/top.v Line: 60
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(86): instance has no name File: E:/github/line_follower/top.v Line: 86
+Critical Warning (10846): Verilog HDL Instantiation warning at test.v(16): instance has no name File: E:/github/line_follower/test.v Line: 16
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top.v(49): object "msg_index" assigned a value but never read File: E:/github/line_follower/top.v Line: 49
+Warning (10036): Verilog HDL or VHDL warning at top.v(51): object "node_t" assigned a value but never read File: E:/github/line_follower/top.v Line: 51
+Warning (10036): Verilog HDL or VHDL warning at top.v(54): object "msg_jndex" assigned a value but never read File: E:/github/line_follower/top.v Line: 54
+Warning (10230): Verilog HDL assignment warning at top.v(174): truncated value with size 32 to match size of target (5) File: E:/github/line_follower/top.v Line: 174
+Warning (10762): Verilog HDL Case Statement warning at top.v(123): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/top.v Line: 123
+Warning (10762): Verilog HDL Case Statement warning at top.v(188): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/top.v Line: 188
+Warning (10230): Verilog HDL assignment warning at top.v(235): truncated value with size 65 to match size of target (64) File: E:/github/line_follower/top.v Line: 235
+Warning (10230): Verilog HDL assignment warning at top.v(237): truncated value with size 65 to match size of target (64) File: E:/github/line_follower/top.v Line: 237
+Warning (10230): Verilog HDL assignment warning at top.v(239): truncated value with size 65 to match size of target (64) File: E:/github/line_follower/top.v Line: 239
+Warning (10230): Verilog HDL assignment warning at top.v(240): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/top.v Line: 240
+Warning (10762): Verilog HDL Case Statement warning at top.v(280): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/top.v Line: 280
+Warning (10762): Verilog HDL Case Statement warning at top.v(119): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/top.v Line: 119
+Warning (10030): Net "next_node.data_a" at top.v(102) has no driver or initial value, using a default initial value '0' File: E:/github/line_follower/top.v Line: 102
+Warning (10030): Net "next_node.waddr_a[0]" at top.v(102) has no driver or initial value, using a default initial value '0' File: E:/github/line_follower/top.v Line: 102
+Warning (10030): Net "next_node.we_a" at top.v(102) has no driver or initial value, using a default initial value '0' File: E:/github/line_follower/top.v Line: 102
+Info (12128): Elaborating entity "adc_control" for hierarchy "adc_control:comb_4" File: E:/github/line_follower/top.v Line: 32
+Warning (10036): Verilog HDL or VHDL warning at adc_control.v(31): object "data_frame" assigned a value but never read File: E:/github/line_follower/adc_control.v Line: 31
+Warning (10036): Verilog HDL or VHDL warning at adc_control.v(32): object "d_out_ch5" assigned a value but never read File: E:/github/line_follower/adc_control.v Line: 32
+Warning (10036): Verilog HDL or VHDL warning at adc_control.v(33): object "d_out_ch6" assigned a value but never read File: E:/github/line_follower/adc_control.v Line: 33
+Warning (10036): Verilog HDL or VHDL warning at adc_control.v(34): object "d_out_ch7" assigned a value but never read File: E:/github/line_follower/adc_control.v Line: 34
+Warning (10230): Verilog HDL assignment warning at adc_control.v(31): truncated value with size 2 to match size of target (1) File: E:/github/line_follower/adc_control.v Line: 31
+Warning (10230): Verilog HDL assignment warning at adc_control.v(32): truncated value with size 12 to match size of target (1) File: E:/github/line_follower/adc_control.v Line: 32
+Warning (10230): Verilog HDL assignment warning at adc_control.v(33): truncated value with size 12 to match size of target (1) File: E:/github/line_follower/adc_control.v Line: 33
+Warning (10230): Verilog HDL assignment warning at adc_control.v(34): truncated value with size 12 to match size of target (1) File: E:/github/line_follower/adc_control.v Line: 34
+Warning (10230): Verilog HDL assignment warning at adc_control.v(53): truncated value with size 32 to match size of target (1) File: E:/github/line_follower/adc_control.v Line: 53
+Warning (10230): Verilog HDL assignment warning at adc_control.v(68): truncated value with size 32 to match size of target (3) File: E:/github/line_follower/adc_control.v Line: 68
+Warning (10230): Verilog HDL assignment warning at adc_control.v(120): truncated value with size 32 to match size of target (4) File: E:/github/line_follower/adc_control.v Line: 120
+Info (12128): Elaborating entity "top_color" for hierarchy "top_color:comb_5" File: E:/github/line_follower/top.v Line: 42
+Warning (10762): Verilog HDL Case Statement warning at top_color.v(23): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/top_color.v Line: 23
+Info (12128): Elaborating entity "freq_counter" for hierarchy "top_color:comb_5|freq_counter:comb_3" File: E:/github/line_follower/top_color.v Line: 6
+Warning (10230): Verilog HDL assignment warning at freq_counter.v(27): truncated value with size 32 to match size of target (8) File: E:/github/line_follower/freq_counter.v Line: 27
+Info (12128): Elaborating entity "uart" for hierarchy "uart:comb_6" File: E:/github/line_follower/top.v Line: 60
+Warning (10230): Verilog HDL assignment warning at uart.v(51): truncated value with size 32 to match size of target (1) File: E:/github/line_follower/uart.v Line: 51
+Warning (10762): Verilog HDL Case Statement warning at uart.v(59): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/uart.v Line: 59
+Info (12128): Elaborating entity "path_planner" for hierarchy "path_planner:comb_7" File: E:/github/line_follower/top.v Line: 86
+Warning (10762): Verilog HDL Case Statement warning at path_planner.v(126): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/path_planner.v Line: 126
+Warning (10230): Verilog HDL assignment warning at path_planner.v(301): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 301
+Warning (10230): Verilog HDL assignment warning at path_planner.v(304): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 304
+Warning (10230): Verilog HDL assignment warning at path_planner.v(307): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 307
+Warning (10230): Verilog HDL assignment warning at path_planner.v(310): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 310
+Warning (10230): Verilog HDL assignment warning at path_planner.v(313): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 313
+Warning (10230): Verilog HDL assignment warning at path_planner.v(316): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 316
+Warning (10230): Verilog HDL assignment warning at path_planner.v(319): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 319
+Warning (10230): Verilog HDL assignment warning at path_planner.v(322): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 322
+Warning (10230): Verilog HDL assignment warning at path_planner.v(325): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 325
+Warning (10230): Verilog HDL assignment warning at path_planner.v(328): truncated value with size 32 to match size of target (2) File: E:/github/line_follower/path_planner.v Line: 328
+Warning (10762): Verilog HDL Case Statement warning at path_planner.v(107): can't check case statement for completeness because the case expression has too many possible states File: E:/github/line_follower/path_planner.v Line: 107
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "graph" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "adj" into its bus
+Warning (276020): Inferred RAM node "path_planner:comb_7|parent_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "next_node" is uninferred due to inappropriate RAM size File: E:/github/line_follower/top.v Line: 102
+    Info (276004): RAM logic "path_planner:comb_7|vis" is uninferred due to inappropriate RAM size File: E:/github/line_follower/path_planner.v Line: 14
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "path_planner:comb_7|parent_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 26
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 26
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "path_planner:comb_7|altsyncram:parent_rtl_0"
+Info (12133): Instantiated megafunction "path_planner:comb_7|altsyncram:parent_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "26"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "26"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ksg1.tdf
+    Info (12023): Found entity 1: altsyncram_ksg1 File: E:/github/line_follower/db/altsyncram_ksg1.tdf Line: 28
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 65 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/github/line_follower/output_files/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 5992 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 5933 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Mon Jan 23 20:21:43 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:31
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/github/line_follower/output_files/top.map.smsg.
+
+

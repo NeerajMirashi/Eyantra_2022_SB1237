@@ -1,0 +1,2 @@
+Due to screen-off issue the screen recording of hterm is stoped between ongoing run and not recorded form GBI8 to GB8-DUMP but when we restared screen and start recording again the you can see GBI8, GB8-PICK and GB8-DUMP messages are already recived (but actually they are recived at their resp. time). So please consider it as techinical issue, it is not cheating. You can check logfile of the same where all messages with timestamp are recived.
+ThankYou so much team eyantra for giving us chance to submit our work!!

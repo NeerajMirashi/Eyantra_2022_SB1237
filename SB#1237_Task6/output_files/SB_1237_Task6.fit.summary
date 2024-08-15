@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Mar 06 21:56:36 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : SB_1237_Task6
+Top-level Entity Name : SB_1237_Task6
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 5,607 / 22,320 ( 25 % )
+    Total combinational functions : 4,996 / 22,320 ( 22 % )
+    Dedicated logic registers : 2,197 / 22,320 ( 10 % )
+Total registers : 2197
+Total pins : 30 / 154 ( 19 % )
+Total virtual pins : 0
+Total memory bits : 1,040 / 608,256 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

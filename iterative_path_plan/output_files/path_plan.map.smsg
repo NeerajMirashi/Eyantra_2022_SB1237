@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at path_plan.v(82): always construct contains both blocking and non-blocking assignments File: E:/github/iterative_path_plan/path_plan.v Line: 82

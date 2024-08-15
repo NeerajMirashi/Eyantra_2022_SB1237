@@ -1,0 +1,3 @@
+module color(input clk, input out, output c);
+reg [32:0]ct;
+reg [1:0]c_r;

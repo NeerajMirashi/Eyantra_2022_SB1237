@@ -1,0 +1,37 @@
+|uart
+clk_50M => ct[0].CLK
+clk_50M => ct[1].CLK
+clk_50M => ct[2].CLK
+clk_50M => ct[3].CLK
+clk_50M => ct[4].CLK
+clk_50M => ct[5].CLK
+clk_50M => ct[6].CLK
+clk_50M => ct[7].CLK
+clk_50M => ct[8].CLK
+clk_50M => ct[9].CLK
+clk_50M => ct[10].CLK
+clk_50M => ct[11].CLK
+clk_50M => ct[12].CLK
+clk_50M => ct[13].CLK
+clk_50M => ct[14].CLK
+clk_50M => ct[15].CLK
+clk_50M => ct[16].CLK
+clk_50M => ct[17].CLK
+clk_50M => ct[18].CLK
+clk_50M => ct[19].CLK
+clk_50M => ct[20].CLK
+clk_50M => ct[21].CLK
+clk_50M => ct[22].CLK
+clk_50M => ct[23].CLK
+clk_50M => ct[24].CLK
+clk_50M => ct[25].CLK
+clk_50M => ct[26].CLK
+clk_50M => ct[27].CLK
+clk_50M => ct[28].CLK
+clk_50M => ct[29].CLK
+clk_50M => ct[30].CLK
+clk_50M => ct[31].CLK
+clk_50M => temp_clk.CLK
+tx << x.DB_MAX_OUTPUT_PORT_TYPE
+
+

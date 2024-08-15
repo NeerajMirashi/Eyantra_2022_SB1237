@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Nov 15 03:21:17 2022
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : path_planner
+Top-level Entity Name : path_planner
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 2,837 / 22,320 ( 13 % )
+    Total combinational functions : 2,551 / 22,320 ( 11 % )
+    Dedicated logic registers : 1,269 / 22,320 ( 6 % )
+Total registers : 1269
+Total pins : 63 / 154 ( 41 % )
+Total virtual pins : 0
+Total memory bits : 832 / 608,256 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

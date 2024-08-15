@@ -1,0 +1,10 @@
+module tb;
+
+reg clk = 0;
+
+always begin
+
+	clk <= 0; #1;
+	clk <= 1; #1;
+
+end
